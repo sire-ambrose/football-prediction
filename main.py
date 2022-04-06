@@ -3,8 +3,8 @@ import numpy as np
 import streamlit as st
 from bayes import dist
 
-data = pd.read_csv('spi_matches.csv')
-#data = pd.read_csv('https://projects.fivethirtyeight.com/soccer-api/club/spi_matches.csv')
+#data = pd.read_csv('spi_matches.csv')
+data = pd.read_csv('https://projects.fivethirtyeight.com/soccer-api/club/spi_matches.csv')
 
 st.write('# Home')
 '\n'
