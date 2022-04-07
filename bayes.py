@@ -123,7 +123,8 @@ def dist(team1, team2, data):
     team2_win= np.tril(goals_dist,-1).sum()*100
 
     fig=plt.figure(figsize=(30,20))  
-    plt.rc('font', size=15)
+    fig.suptitle(f'{team1} Vs {team2}', size=35)
+    plt.rc('font', size=23)
     mylabels = [team1, "Draw", team2]
     mycolors = ["red", "purple", "blue"]
     plt.legend( mylabels, loc ="upper left")
@@ -132,7 +133,7 @@ def dist(team1, team2, data):
     mylabels = [team1, "Draw", team2]
     mycolors = ["red", "purple", "blue"]
     plt.pie(y, colors = mycolors,autopct='%1.1f%%')
-    plt.legend( mylabels, loc ="lower right")
+    plt.legend( mylabels, loc ="upper left")
     plt.title('Odds Of Winning')
     plt.subplot(2,2,2)
     plt.bar(list(range(show)), disp.sum(axis=0)*100, color='red')
@@ -150,5 +151,6 @@ def dist(team1, team2, data):
     plt.title('Aggregated Goal Distribution')
     plt.xlabel(team1)
     plt.ylabel(team2)
+    
     #plt.show()
     streamlit.pyplot(fig)
