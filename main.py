@@ -4,11 +4,11 @@ import streamlit as st
 from bayes import dist
 
 #data = pd.read_csv('spi_matches.csv')
-dev= False
+dev= True
 
 if dev==True:
     data = pd.read_csv('https://projects.fivethirtyeight.com/soccer-api/club/spi_matches.csv')
-    data.to_csv('spi_matches.csv', index=False)
+    #data.to_csv('spi_matches.csv', index=False)
 else:
     data = pd.read_csv('spi_matches.csv')
 
