@@ -144,13 +144,13 @@ def dist(team1, team2, data):
     plt.bar(list(range(show)), disp.sum(axis=0)*100, color='red')
     title= team1+' Goal Distribution'
     plt.title(title)
-    dct={'Goals':list(range(show)), 'Probability team1': disp.sum(axis=0)*100}
+    dct={'Goals':list(range(show)), 'Probability ('+team1+')': disp.sum(axis=0)*100}
     bar1=pd.DataFrame(dct)
     plt.subplot(2,2,3)
     plt.barh(list(range(show)), disp.sum(axis=1)*100, color='blue')
     title= team2+' Goal Distribution'
     plt.title(title)
-    dct={'Goals':list(range(show)), 'Probability team2': disp.sum(axis=1)*100}
+    dct={'Goals':list(range(show)), 'Probability ('+team2+')': disp.sum(axis=1)*100}
     bar2=pd.DataFrame(dct)
     bar2.drop(['Goals'], axis=1, inplace =True)
 
